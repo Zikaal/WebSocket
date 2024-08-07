@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #002b6d; /* Темно-синий фон страницы */
+            color: #ffffff; /* Белый текст */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #chat-container {
+            background-color: #003366; /* Темно-синий для контейнера */
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            height: 80vh; /* Высота контейнера для сообщений */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #chat-log {
+            background-color: #003366; /* Темно-синий для лога сообщений */
+            border: 1px solid #004080; /* Более светлый синий для границы */
+            border-radius: 10px;
+            padding: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        #input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        #message-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #004080; /* Более светлый синий для границы */
+            border-radius: 30px;
+            background-color: #004080; /* Светло-синий фон для ввода */
+            color: #ffffff;
+            margin-right: 10px;
+        }
+
+        #connect-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #007bff; /* Ярко-синий цвет кнопки */
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #connect-btn:hover {
+            background-color: #0056b3; /* Темнее синий при наведении */
+        }
+
+        #chat-log div {
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .user-message {
+            background-color: #004080; /* Светло-синий фон для сообщений пользователя */
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .server-message {
+            background-color: #003366; /* Темно-синий фон для сообщений сервера */
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-log"></div>
+    <input type="text" id="message-input" placeholder="Enter your message">
+    <button id="connect-btn">Connect</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
