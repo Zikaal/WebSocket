@@ -16,7 +16,7 @@ async def get_message_history(conn):
     ''', MESSAGE_HISTORY_LIMIT)
 
 async def handler(websocket, path):
-    conn = await asyncpg.connect(user='postgres', password='Alikhan23012006', database='chatdb', host='localhost')
+    conn = await asyncpg.connect(user='postgres', password='*******', database='chatdb', host='localhost')
     user_id = None
 
     try:
