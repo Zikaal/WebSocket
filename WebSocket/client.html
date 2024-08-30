@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #e6ebf4; /* Светлый фон, как в Telegram */
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#chat-container {
+    background-color: #ffffff; /* Белый фон контейнера, как в Telegram */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: 80vh; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#chat-log {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #dcf8c6; /* Светло-зеленый цвет для сообщений пользователя */
+    align-self: flex-end;
+}
+
+.server-message {
+    background-color: #f1f0f0; /* Светло-серый цвет для сообщений сервера */
+    align-self: flex-start;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #cccccc; 
+    border-radius: 30px;
+    background-color: #ffffff; 
+    color: #000000;
+    margin-right: 10px;
+}
+
+#connect-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #007bff; 
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#connect-btn:hover {
+    background-color: #0056b3; 
+}
+
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-log"></div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Enter your message">
+            <button id="connect-btn">Connect</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
